@@ -1,2 +1,2 @@
 # libft
-my own implementation of some libc functions
+a library of some libc's functions and others
