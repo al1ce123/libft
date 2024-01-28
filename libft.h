@@ -6,7 +6,7 @@
 /*   By: nlence-l <nlence-l@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/28 17:18:04 by nlence-l          #+#    #+#             */
-/*   Updated: 2024/01/28 19:21:42 by nlence-l         ###   ########.fr       */
+/*   Updated: 2024/01/28 19:47:23 by nlence-l         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,7 +32,9 @@ int     toupper(int c);
 int     tolower(int c);
 char    *strchr(const char *s, int c);
 char    *strrchr(const char *s, int c);
-
+int     strncmp(const char *s1, const char *s2, size_t n);
+void    *memchr(const void *s, int c, size_t n);
+int     memcmp(const void *s1, const void *s2, size_t n);
 
 
 #endif
