@@ -6,13 +6,13 @@
 /*   By: nlence-l <nlence-l@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/28 17:27:59 by nlence-l          #+#    #+#             */
-/*   Updated: 2024/01/28 18:05:45 by nlence-l         ###   ########.fr       */
+/*   Updated: 2024/02/09 14:10:14 by nlence-l         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	isascii(int c)
+int	ft_isascii(int c)
 {
     if (c >= 0 && c <= 127)
         return (0);

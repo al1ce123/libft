@@ -6,13 +6,13 @@
 /*   By: nlence-l <nlence-l@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/28 18:09:05 by nlence-l          #+#    #+#             */
-/*   Updated: 2024/01/28 18:20:30 by nlence-l         ###   ########.fr       */
+/*   Updated: 2024/02/09 14:10:04 by nlence-l         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void bzero(void *s, size_t n)
+void ft_bzero(void *s, size_t n)
 {
     size_t i;
 

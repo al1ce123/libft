@@ -6,13 +6,13 @@
 /*   By: nlence-l <nlence-l@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/28 19:21:58 by nlence-l          #+#    #+#             */
-/*   Updated: 2024/01/28 19:24:41 by nlence-l         ###   ########.fr       */
+/*   Updated: 2024/02/09 14:11:00 by nlence-l         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char *strrchr(const char *s, int c)
+char *ft_strrchr(const char *s, int c)
 {
     size_t i;
     size_t s_len;

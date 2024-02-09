@@ -6,13 +6,13 @@
 /*   By: nlence-l <nlence-l@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/28 18:33:12 by nlence-l          #+#    #+#             */
-/*   Updated: 2024/01/28 18:42:34 by nlence-l         ###   ########.fr       */
+/*   Updated: 2024/02/09 14:10:29 by nlence-l         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void *memmove(void *dest, const void *src, size_t n)
+void *ft_memmove(void *dest, const void *src, size_t n)
 {
     size_t i;
     void *temp;

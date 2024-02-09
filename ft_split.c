@@ -110,20 +110,20 @@ char **ft_split(char const *s, char c)
     return (array);
 }
 
-int main(void)
-{
-    const char *inputString = "Hello,World,C";
-    char delimiter = ',';
+// int main(void)
+// {
+//     const char *inputString = "Hello,World,C";
+//     char delimiter = ',';
 
-    char **result = ft_split(inputString, delimiter);
+//     char **result = ft_split(inputString, delimiter);
 
-    while (*result)
-    {
-        printf("%s\n", *result);
-        result++;
-    }
+//     while (*result)
+//     {
+//         printf("%s\n", *result);
+//         result++;
+//     }
 
-    free_strings(result, find_strings_nbr(inputString, delimiter));
+//     free_strings(result, find_strings_nbr(inputString, delimiter));
 
-    return 0;
-}
+//     return 0;
+// }

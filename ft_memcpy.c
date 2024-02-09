@@ -6,14 +6,14 @@
 /*   By: nlence-l <nlence-l@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/28 18:21:15 by nlence-l          #+#    #+#             */
-/*   Updated: 2024/01/28 18:31:57 by nlence-l         ###   ########.fr       */
+/*   Updated: 2024/02/09 14:10:26 by nlence-l         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 
 #include "libft.h"
 
-void *memcpy(void *dest, const void *src, size_t n)
+void *ft_memcpy(void *dest, const void *src, size_t n)
 {
     size_t i;
 
