@@ -24,7 +24,7 @@ static int checks(const char *nptr, int *i, int *sign)
 {
     if (!nptr)
         return (-1);
-    while (nptr[*i] == ' ' || nptr[*i] == '\t')
+    while (nptr[*i] == ' ' || (nptr[*i] >= 9 && nptr[*i] <= 13))
         (*i)++;
     if (nptr[*i] == '+') 
         (*i)++;
@@ -37,6 +37,7 @@ static int checks(const char *nptr, int *i, int *sign)
         return (-1);
     return (0);
 }
+
 
 static int get_nbr_len(const char *nptr, int *i, int *sign)
 {
@@ -52,7 +53,9 @@ static int get_nbr_len(const char *nptr, int *i, int *sign)
         return (-1);
     else if (nbr_len > 19 && *sign == -1)
         return (0);
-    if (ft_strncmp(&nptr[*i - nbr_len], "9223372036854775808", nbr_len) == 0 && *sign == 1 && nbr_len == 19)
+    else if (ft_strncmp(&nptr[*i - nbr_len], "9223372036854775807", nbr_len) == 0 && *sign == 1 && nbr_len == 19)
+        return (-1);
+    else if (ft_strncmp(&nptr[*i - nbr_len], "9223372036854775808", nbr_len) == 0 && *sign == 1 && nbr_len == 19)
         return (-1);
     else if (ft_strncmp(&nptr[*i - nbr_len], "9223372036854775809", nbr_len) == 0 && *sign == 1 && nbr_len == 19)
         return (-1);
@@ -64,11 +67,13 @@ static int get_nbr_len(const char *nptr, int *i, int *sign)
 int     ft_atoi(const char *nptr)
 {
     int i;
+    int nbr_len;
     int pow;
     int sign;
     long long res;
-    int nbr_len;
 
+    if (!nptr)
+        return (-1);
     init(&i, &pow, &sign, &res);
     if (checks(nptr, &i, &sign) == -1)
         return (0);
@@ -82,35 +87,13 @@ int     ft_atoi(const char *nptr)
         while (--i >= 0 && ft_isdigit(nptr[i]))
         {
             res += ((nptr[i] - '0') * pow);
-            if (res == LLONG_MAX)
-                return (-1);
             pow *= 10;
         }
     }
-    res *= sign;
-    return (res);
+    return (res * sign);
 }
 
-int	ft_atoi(const char *nptr)
-{
-	int result = 0;
-	int sign = 1;
 
-	while (*nptr == ' ' || (*nptr >= 9 && *nptr <= 13))
-        	nptr++;
-	if (*nptr == '-')
-		sign = -1;
-	if (*nptr == '-' || *nptr == '+')
-		nptr++;
-	while (*nptr >= '0' && *nptr <= '9')
-	{
-		result = result * 10 + *nptr - '0';
-		nptr++;
-	}
-	return (sign * result);
-}
-
-// 998
 
 
 
