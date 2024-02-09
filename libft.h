@@ -29,6 +29,9 @@ typedef struct      s_btree
     void            *item;
 }                   t_btree;
 
+# define LLONG_MAX 9223372036854775807
+# define LLONG_MIN -9223372036854775808
+
 int		ft_isalpha(int c);
 int		ft_isdigit(int c);
 int		ft_isalnum(int c);
