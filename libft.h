@@ -6,7 +6,7 @@
 /*   By: nlence-l <nlence-l@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/28 17:18:04 by nlence-l          #+#    #+#             */
-/*   Updated: 2024/02/09 15:20:13 by nlence-l         ###   ########.fr       */
+/*   Updated: 2024/02/09 15:49:13 by nlence-l         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -51,6 +51,7 @@ int     ft_memcmp(const void *s1, const void *s2, size_t n);
 char    *ft_strnstr(const char *big, const char *little, size_t len);
 int     ft_atoi(const char *nptr);
 
+char    *ft_strjoin(char const *s1, char const *s2);
 char    **ft_split(char const *s, char c);
 
 
