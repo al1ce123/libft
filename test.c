@@ -1,27 +1,16 @@
 #include "libft.h"
 #include <string.h>
+#include <stdlib.h>
+#include <stdio.h>
 
 int main(void) {
 
-    printf("%d\n", ft_atoi("9223372036854775806"));
-    printf("%d\n", atoi("9223372036854775806"));
-    printf("%d\n", ft_atoi("-9223372036854775809"));
-    printf("%d\n", atoi("-9223372036854775809"));
-    printf("%d\n", ft_atoi("-9223372036854775807"));
-    printf("%d\n", atoi("-9223372036854775807"));
-    printf("%d\n", ft_atoi("9223372036854775808"));
-    printf("%d\n", atoi("9223372036854775808"));
-    printf("%d\n", ft_atoi("9223372036854775809"));
-    printf("%d\n", atoi("9223372036854775809"));
-    printf("%d\n", ft_atoi("+45"));
-    printf("%d\n", atoi("+45"));
-    printf("%d\n", ft_atoi("-9223372036854"));
-    printf("%d\n", atoi("-9223372036854"));
-    printf("%d\n", ft_atoi("9223372036854"));
-    printf("%d\n", atoi("9223372036854"));
-    printf("%d\n", ft_atoi("9223372036854"));
-    printf("%d\n", atoi("9223372036854"));
-    printf("%d\n", ft_atoi("          \n\n\n\n          -9223"));
-    printf("%d\n", atoi("       \n\n\n\n              -9223"));
+    int *ptr;
+
+    ptr = (int *)calloc(1000000000, sizeof(int));
+    if (!ptr)
+        printf("Null Ptr\n");
+
+    free (ptr);
     return 0;
 }
